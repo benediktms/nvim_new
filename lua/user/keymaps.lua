@@ -64,10 +64,16 @@ keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fs", ":Telescope lsp_document_symbols<CR>", opts)
-keymap("n", "<leader>fr", ":Telescope lsp_references<CR>", opts)
 
 -- Touble
 keymap("n", "<leader>tt", ":TroubleToggle<CR>", opts)
+keymap("n", "<leader>tr", ":Trouble lsp_references<CR>", opts)
+keymap("n", "<leader>td", ":Trouble workspace_diagnostics<CR>", opts)
+keymap("n", "<leader>tf", ":Trouble lsp_definitions<CR>", opts)
+keymap("n", "<leader>tq", ":Trouble quickfix<CR>", opts)
+
+-- LSP
+keymap("n", "<leader>lr", ":lua vim.lsp.buf.rename", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
